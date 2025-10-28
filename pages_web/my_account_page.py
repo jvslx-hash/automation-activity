@@ -14,6 +14,7 @@ class MyAccountPage(BasePage):
         self.new_password_field = (By.XPATH, "//input[@type='password']")
         self.save_password_button = (By.XPATH, "//button[.//div[normalize-space(text())='Salvar senha']]")
         self.save_password_button_disabled = (By.XPATH, "//button[normalize-space()='Salvar senha' and (@disabled or @aria-disabled='true')]")
+        self.masked_password_text = (By.XPATH, "//div[text()='******************']")
 
     def validate_email_on_my_account(self):
         return self.find_element(*self.email_on_my_account).text  
@@ -41,19 +42,47 @@ class MyAccountPage(BasePage):
 
     def fill_form_password_with_less_than_eight_characters(self, data):
         self.send_keys_to_element(*self.new_password_field, data["password"])
-        self.wait_for_visibility_of_element(*self.save_password_button_disabled)
+        time.sleep(2)
+        assert self.is_element_displayed(*self.save_password_button_disabled)
+        
+        element = self.find_element(*self.new_password_field)
+        element.click()
+        element.send_keys(Keys.COMMAND + "a")
+        element.send_keys(Keys.BACK_SPACE)
+        time.sleep(1)
 
     def fill_form_password_without_numbers(self, data):
         self.send_keys_to_element(*self.new_password_field, data["password"])
-        self.wait_for_visibility_of_element(*self.save_password_button_disabled)
+        time.sleep(2)
+        assert self.is_element_displayed(*self.save_password_button_disabled)
+
+        element = self.find_element(*self.new_password_field)
+        element.click()
+        element.send_keys(Keys.COMMAND + "a")
+        element.send_keys(Keys.BACK_SPACE)
+        time.sleep(1)
 
     def fill_form_password_without_lowercase(self, data):
         self.send_keys_to_element(*self.new_password_field, data["password"])
-        self.wait_for_visibility_of_element(*self.save_password_button_disabled)
+        time.sleep(2)
+        assert self.is_element_displayed(*self.save_password_button_disabled)
+
+        element = self.find_element(*self.new_password_field)
+        element.click()
+        element.send_keys(Keys.COMMAND + "a")
+        element.send_keys(Keys.BACK_SPACE)
+        time.sleep(1)
 
     def fill_form_password_without_uppercase(self, data):
         self.send_keys_to_element(*self.new_password_field, data["password"])
-        self.wait_for_visibility_of_element(*self.save_password_button_disabled)   
+        time.sleep(2)
+        assert self.is_element_displayed(*self.save_password_button_disabled)   
+
+        element = self.find_element(*self.new_password_field)
+        element.click()
+        element.send_keys(Keys.COMMAND + "a")
+        element.send_keys(Keys.BACK_SPACE)
+        time.sleep(1)
 
     def fill_form_correct_password(self,data):
         self.send_keys_to_element(*self.new_password_field, data["password"])
@@ -61,4 +90,7 @@ class MyAccountPage(BasePage):
 
     def click_save_password(self):    
         self.wait_for_element_to_be_clickable(*self.save_password_button) 
-        time.sleep(5)
+        time.sleep(2)
+
+    def validate_masked_password(self):
+        assert self.is_element_displayed(*self.masked_password_text)   

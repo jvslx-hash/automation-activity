@@ -11,20 +11,8 @@ class BasePage:
         return self.wait.until(EC.presence_of_element_located((by, locator)))
 
     def send_keys_to_element(self, by, locator, text):
-        # 1. Espera o elemento ficar visível
-        element = self.wait.until(EC.visibility_of_element_located((by, locator)))
+        self.find_element(by, locator).send_keys(text)
         
-        # 2. Clica para garantir o foco
-        element.click()
-        
-        # 3. Simula "Selecionar Tudo" (Ctrl+A)
-        element.send_keys(Keys.CONTROL + "a")
-        
-        # 4. Simula "Apagar"
-        element.send_keys(Keys.BACK_SPACE)
-        
-        # 5. Envia o novo texto
-        element.send_keys(text)
 
     def get_element_text(self, by, locator):
         return self.find_element(by, locator).text

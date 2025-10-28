@@ -15,7 +15,7 @@ def test_main(driver, load_data):
 
     login_page = home_page.click_login()
     login_page.fill_email_field(email_capturado)
-    #login_page.click_send_email()
+    login_page.click_send_email()
 
     email_page.return_to_email()
     email_page.click_message()
@@ -47,8 +47,9 @@ def test_main(driver, load_data):
     my_account_page.fill_form_password_without_numbers(load_data["password_without_numbers"])
     my_account_page.fill_form_password_without_lowercase(load_data["password_without_lowercase"])
     my_account_page.fill_form_password_without_uppercase(load_data["password_without_uppercase"])   
-    my_account_page.fill_form_correct_password(load_data["correctt_password"]) 
+    my_account_page.fill_form_correct_password(load_data["correct_password"]) 
     my_account_page.click_save_password()
+    my_account_page.validate_masked_password()
     
 
 

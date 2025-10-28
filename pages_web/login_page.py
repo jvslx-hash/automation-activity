@@ -9,7 +9,7 @@ class LoginPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         self.email_field_class = (By.NAME, "email")
-        self.send_email_button = (By.XPATH, "//div[contains(@class, 'vtex-login-2-x-sendButton')]/button")
+        self.send_email_button = (By.XPATH, "//button[@type='submit' and normalize-space()='Enviar']")
         self.send_token_button = (By.XPATH, "//button[normalize-space()='Confirmar']")
         self.token_field = (By.NAME, "token") 
         self.button_my_account = (By.CLASS_NAME, "ButtonLogin_Container__sgzuk")
@@ -17,12 +17,13 @@ class LoginPage(BasePage):
 
     def fill_email_field(self, email_capturado):
         self.send_keys_to_element(*self.email_field_class, email_capturado)
-        self.send_keys_to_element(*self.email_field_class, Keys.ENTER)
+        #self.send_keys_to_element(*self.email_field_class, Keys.ENTER)
         time.sleep(4)
 
-    # def click_send_email(self):
-    #     self.wait_for_element_to_be_clickable(*self.send_email_button)
-    #     time.sleep(2)
+    def click_send_email(self):
+        send_email_button = self.find_element(*self.send_email_button)
+        self.driver.execute_script("arguments[0].click();", send_email_button)
+        time.sleep(2)
 
     def fill_token_field(self, code_text):
         self.send_keys_to_element(*self.token_field, code_text)
