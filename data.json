@@ -1,0 +1,17 @@
+{
+    "password_with_less_than_eight_characters": {
+        "password": "1234567"
+    },
+    "password_without_numbers": {
+        "password": "PasswordwoNum"
+    },
+    "password_without_lowercase": {
+        "password": "PASSWORDWO123"
+    },
+    "password_without_uppercase": {
+        "password": "passwordwo123"
+    },
+    "correct_password": {
+        "password": "SantaCruz1914"
+    }
+}
