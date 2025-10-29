@@ -17,13 +17,11 @@ class HomePage(BasePage):
         self.driver.get(self.americanas_url)
 
     def close_oferta_relampago(self):
-        try:
-            if self.is_element_displayed(*self.close_oferta_relampago_button_class) and self.is_element_enabled(*self.close_oferta_relampago_button_class):
-                self.wait_for_element_to_be_clickable(*self.close_oferta_relampago_button_class)
-                return True
-            return False
-        except Exception:
-            return False
+        if self.is_element_displayed(*self.close_oferta_relampago_button_class) and self.is_element_enabled(*self.close_oferta_relampago_button_class):
+            self.wait_for_element_to_be_clickable(*self.close_oferta_relampago_button_class)
+            return True
+            
+        return False
  
     def get_email(self):
         handle_da_americanas = self.driver.current_window_handle

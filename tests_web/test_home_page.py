@@ -1,5 +1,4 @@
 from pages_web.home_page import HomePage
-import pytest
 
 def test_main(driver, load_data):
 
