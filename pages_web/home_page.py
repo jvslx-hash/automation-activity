@@ -33,6 +33,7 @@ class HomePage(BasePage):
         time.sleep(1)
         return LoginPage(self.driver)
     
+    
     def validate_home_page(self):
         assert self.driver.current_url == self.americanas_url
         

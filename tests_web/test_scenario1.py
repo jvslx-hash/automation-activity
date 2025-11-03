@@ -25,8 +25,9 @@ def test_main(driver, load_data):
     login_page.fill_token_field(token_capturado)
     login_page.click_send_token()
 
-    assert email_capturado in login_page.email_message()
     home_page.validate_home_page()
+    assert email_capturado in login_page.email_message()
+    
 
     my_account_page = login_page.click_my_account()
 

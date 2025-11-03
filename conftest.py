@@ -1,12 +1,14 @@
-from selenium import webdriver
 import pytest
 import json
 from pathlib import Path
 import requests
- 
+from selenium import webdriver as selenium_webdriver
+from appium import webdriver as appium_webdriver
+from appium.options.common.base import AppiumOptions
+
 @pytest.fixture
 def driver():
-    driver_instance = webdriver.Chrome()
+    driver_instance = selenium_webdriver.Chrome()
     driver_instance.maximize_window()
     yield driver_instance
     driver_instance.quit()
@@ -38,6 +40,8 @@ def product_data_from_api():
         
     token = login_json["access_token"] 
 
+    all_products_translated = []
+
     wishlist_url = f"{base_url}/wishlists/1/products"
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.get(wishlist_url, headers=headers)
@@ -46,12 +50,46 @@ def product_data_from_api():
     api_data = response.json()
     #print(f"DEBUG: JSON recebido de /wishlists: {api_data}")
 
-    first_product = api_data[0]
-
-    product_to_test = {
-        "name": first_product["Product"],
-        "price": first_product["Price"]
-    }
+    for product in api_data:
+        #print(f"{product}")
+        all_products_translated.append({
+            "name": product["Product"],
+            "price": product["Price"],
+            "zipcode": product["Zipcode"], 
+            "delivery_estimate": product["delivery_estimate"],
+            "shipping_fee": product["shipping_fee"]
+        })
         
-    return product_to_test
+    def _get_product_by_index(index: int):
+        return all_products_translated[index]
+
+    return _get_product_by_index
+
+# mobile
+
+
+
+@pytest.fixture(scope="function")
+def mobile_driver(request):
+    # --- SETUP PHASE ---
+    options = AppiumOptions()
+    options.load_capabilities({ "platformName": "Android",
+	"appium:deviceName": "emulator-5554",
+	"appium:automationName": "UiAutomator2",
+	"appium:appPackage": "com.b2w.americanas",
+    "appium:autoGrantPermissions": True,
+    "appium:ensureWebviewsHavePages": True,
+	"appium:ensureWebviewsHavePages": True,
+	"appium:nativeWebScreenshot": True,
+	"appium:newCommandTimeout": 3600,
+	"appium:connectHardwareKeyboard": True,
+    "appWaitDuration": 30000 }) # Capabilities defined here
+
+    _driver = appium_webdriver.Remote("http://127.0.0.1:4723", options=options)
+    
+    # The 'yield' keyword passes control to the test function
+    yield _driver
+    if _driver:
+        _driver.quit()
+
         

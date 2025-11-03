@@ -13,5 +13,17 @@
     },
     "correct_password": {
         "password": "SantaCruz1914"
+    },
+    "email_enter_with_email_and_password":{
+        "email": "zezinholouleiro5@outlook.com"
+    },
+    "password_enter_with_email_and_password":{
+        "password": "Cesar123"
+    },
+    "wrong_password":{
+        "password": "Cesar1234"
+    },
+    "wrong_zipcode":{
+        "zipcode": "00000000"
     }
 }

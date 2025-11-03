@@ -17,6 +17,7 @@ class ViewProductsPageApi(BasePage):
     
     def validate_product_price_grid_view(self):
         return self.find_element(*self.product_price).text.split()
+        time.sleep(2)
     
     def change_to_list(self):
         self.wait_for_element_to_be_clickable(*self.button_list)

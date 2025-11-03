@@ -2,8 +2,10 @@ from pages_web.home_page_api import HomePageApi
 
 def test_main(driver, product_data_from_api):
 
-    product_name = product_data_from_api["name"]
-    product_price = product_data_from_api["price"]
+    product_data = product_data_from_api(index=1) 
+
+    product_name = product_data["name"]
+    product_price = product_data["price"]
 
     home_page_api = HomePageApi(driver)
     home_page_api.navigate()

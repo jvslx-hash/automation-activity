@@ -102,3 +102,116 @@
 
 [START] Test 'Documents/automation-activity/tests_web/tests_web_with_api_data.py::test_main' - 16:09:31
 [END] Test 'Documents/automation-activity/tests_web/tests_web_with_api_data.py::test_main' finished in 16.10 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/tests_web_with_api_data.py::test_main' - 16:17:27
+[END] Test 'Documents/automation-activity/tests_web/tests_web_with_api_data.py::test_main' finished in 18.53 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario1.py::test_main' - 09:39:47
+[END] Test 'Documents/automation-activity/tests_web/test_scenario1.py::test_main' finished in 78.48 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/tests_scenario5.py::test_main' - 09:41:28
+[END] Test 'Documents/automation-activity/tests_web/tests_scenario5.py::test_main' finished in 0.25 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 09:42:05
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 12.92 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 09:48:00
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 11.48 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 09:50:05
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 0.28 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 09:50:17
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 16.70 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 10:18:27
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 17.91 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 10:18:52
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 16.24 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 10:19:37
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 18.23 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 10:21:56
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 2.54 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 10:54:17
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 12.06 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' - 10:55:09
+[END] Test 'Documents/automation-activity/tests_web/test_scenario5.py::test_main' finished in 17.88 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' - 11:07:03
+[END] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' finished in 11.89 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' - 11:08:02
+[END] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' finished in 11.52 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' - 11:08:57
+[END] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' finished in 17.20 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario1.py::test_main' - 11:19:38
+[END] Test 'Documents/automation-activity/tests_web/test_scenario1.py::test_main' finished in 76.76 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' - 11:23:06
+[END] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' finished in 13.03 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' - 11:24:39
+[END] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' finished in 17.52 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' - 11:30:05
+[END] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' finished in 17.09 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' - 11:30:43
+[END] Test 'Documents/automation-activity/tests_web/test_scenario6.py::test_main' finished in 16.59 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' - 11:36:08
+[END] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' finished in 18.34 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' - 11:37:52
+[END] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' finished in 16.49 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' - 11:40:29
+[END] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' finished in 18.42 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' - 11:44:57
+[END] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' finished in 0.03 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' - 11:45:49
+[END] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' finished in 17.23 seconds.
+
+[START] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' - 11:56:48
+[END] Test 'Documents/automation-activity/tests_web/test_scenario7.py::test_main' finished in 29.47 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 12:14:01
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 12:16:46
+[END] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' finished in 2.67 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 12:17:11
+[END] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' finished in 53.26 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 12:23:19
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 12:29:02
+[END] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' finished in 49.97 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 13:42:33
+[END] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' finished in 20.39 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 13:43:43
+[END] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' finished in 68.85 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 13:45:14
+[END] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' finished in 52.16 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 13:53:58
+[END] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' finished in 53.60 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 13:56:56
+[END] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' finished in 52.07 seconds.
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 13:59:36
+
+[START] Test 'Documents/automation-activity/tests_mobile/test_scenario3.py::test_main' - 14:04:52
