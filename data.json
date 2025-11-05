@@ -23,6 +23,9 @@
     "wrong_password":{
         "password": "Cesar1234"
     },
+    "invalid_password":{
+        "password": "cesar12345"
+    },
     "wrong_zipcode":{
         "zipcode": "00000000"
     }
