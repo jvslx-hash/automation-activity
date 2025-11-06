@@ -12,7 +12,7 @@ def test_main(mobile_driver, load_data):
     account_page.input_password(load_data["invalid_password"])
     account_page.click_login_button()
     account_page.validate_alert_invalid_password_displayed()
-    time.sleep(2)
+    time.sleep(1)
 
 
     
