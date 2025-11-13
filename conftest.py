@@ -5,10 +5,15 @@ import requests
 from selenium import webdriver as selenium_webdriver
 from appium import webdriver as appium_webdriver
 from appium.options.common.base import AppiumOptions
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 @pytest.fixture
 def driver():
-    driver_instance = selenium_webdriver.Chrome()
+    options = ChromeOptions()
+    service = ChromeService(ChromeDriverManager().install())
+    driver_instance = selenium_webdriver.Chrome(service=service, options=options)
     driver_instance.maximize_window()
     yield driver_instance
     driver_instance.quit()
@@ -48,10 +53,8 @@ def product_data_from_api():
     response.raise_for_status()
         
     api_data = response.json()
-    #print(f"DEBUG: JSON recebido de /wishlists: {api_data}")
 
     for product in api_data:
-        #print(f"{product}")
         all_products_translated.append({
             "name": product["Product"],
             "price": product["Price"],
@@ -71,7 +74,6 @@ def product_data_from_api():
 
 @pytest.fixture(scope="function")
 def mobile_driver(request):
-    # --- SETUP PHASE ---
     options = AppiumOptions()
     options.load_capabilities({ "platformName": "Android",
 	"appium:deviceName": "emulator-5554",
@@ -83,11 +85,10 @@ def mobile_driver(request):
 	"appium:nativeWebScreenshot": True,
 	"appium:newCommandTimeout": 3600,
 	"appium:connectHardwareKeyboard": True,
-    "appWaitDuration": 30000 }) # Capabilities defined here
+    "appWaitDuration": 30000 }) 
 
     _driver = appium_webdriver.Remote("http://127.0.0.1:4723", options=options)
-    
-    # The 'yield' keyword passes control to the test function
+
     yield _driver
     if _driver:
         _driver.quit()

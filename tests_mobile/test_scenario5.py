@@ -2,7 +2,7 @@ from pages_mobile.home_page import HomePage
 
 def test_main(mobile_driver, product_data_from_api):
 
-    product_data = product_data_from_api(index=2) 
+    product_data = product_data_from_api(index=0) 
 
     product_name = product_data["name"]
     product_price = product_data["price"]

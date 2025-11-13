@@ -72,8 +72,8 @@ def test_scenario10():
     assert response_data["detail"] == "Invalid email format"
 
 def test_scenario11(): 
-    email = "testuser1@example.com"
-    username = "testuser1"
+    email = "testuser5@example.com"
+    username = "testuser5"
     
     register_url = f"{BASE_URL}/auth/login"
     
@@ -87,6 +87,7 @@ def test_scenario11():
     assert response.status_code == 200
 
     response_data = response.json()
+    print(response_data)
     assert "access_token" in response_data
     assert "token_type" in response_data
 
@@ -509,7 +510,7 @@ def test_scenario32():
     }
 
     response = requests.delete(products_url, json=payload, headers=headers)    
-    assert response.status_code == 404 #ja apaguei o 1, dai a api retorna 404, ao inves de 204
+    assert response.status_code == 204 #ja apaguei o 1, dai a api retorna 404, ao inves de 204
 
 def test_scenario33():  
     auth_user = "projeto@example.com"
