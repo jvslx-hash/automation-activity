@@ -63,10 +63,7 @@ def product_data_from_api():
             "shipping_fee": product["shipping_fee"]
         })
         
-    def _get_product_by_index(index: int):
-        return all_products_translated[index]
-
-    return _get_product_by_index
+    return all_products_translated
 
 # mobile
 
